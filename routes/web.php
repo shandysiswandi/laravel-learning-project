@@ -13,6 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::redirect('/', '/en');
+
+Route::group(['prefix' => '{language}'], function () {
+    Route::get('/', function () {
+        return view('welcome');
+    });
+
+    Route::get('/switch-language', function () {
+        // return changeLanguage('ed') . " klk";
+        return view('lang');
+    });
+
+    Route::get('/long/url/switch/{id}/language', function ($_, $id) {
+        // return changeLanguage('ed') . " klk";
+        return view('long')->with('id', $id);
+    });
 });
