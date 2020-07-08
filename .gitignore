@@ -3,9 +3,15 @@
 /public/storage
 /storage/*.key
 /vendor
+
+package-lock.json
+composer.lock
+
+.env
 .env
 .env.backup
 .phpunit.result.cache
+
 Homestead.json
 Homestead.yaml
 npm-debug.log
