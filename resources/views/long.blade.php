@@ -72,6 +72,13 @@
             <div class="title m-b-md">
                 {{ __('welcome.welcome') }}
             </div>
+
+            <div class="title m-b-md">
+                {{ $id }}
+            </div>
+
+            <a href="{{ url(changeLanguage('id')) }}">ID</a>
+            <a href="{{ url(changeLanguage('en')) }}">EN</a>
         </div>
     </div>
 </body>
